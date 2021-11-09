@@ -1,0 +1,50 @@
+<h1 id="h1" style="color: #70757d;">GESTIÓN DE METAS</h1>
+  <mat-card class="card responsive">
+  <mat-card-title>EDICIÓN DE META</mat-card-title>
+  <mat-card-content id="cont">
+      <form  [formGroup]="m">
+      <input type="text" formControlName="id" style="display: none;"> 
+      <mat-form-field id ="mat2" appearance="legacy">
+        <mat-label style="color: black;">Ádministración: {{this._namearea}} </mat-label>
+        <mat-select  formControlName="area">
+          <mat-option (click)="select()" *ngFor="let a of area" [value]="a" >
+            {{a.area}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field id ="mat1" class="example-full-width ml-15" aspect="legacy">
+        <mat-label>Responsable</mat-label>
+        <input type="text" matInput  name="responsable"   placeholder="Ingresar monto" formControlName="responsable">
+        <mat-hint></mat-hint>
+        <mat-error>
+            <mat-error ><strong>campo requerido</strong></mat-error>
+        </mat-error>
+    </mat-form-field>
+
+      <mat-form-field id="mata" appearance="legacy">
+        <mat-label >Rango: {{this.datefrom}}/{{this.dateto}}</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate formControlName="datefrom" placeholder="Fecha Inicio">
+          <input matEndDate formControlName="dateto" placeholder="Fecha Fin">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+
+         <mat-form-field id ="mata" class="example-full-width ml-15" aspect="legacy">
+            <mat-label>Monto</mat-label>
+            <input type="text" matInput  name="monto"   placeholder="Ingresar monto" formControlName="monto">
+            <mat-hint></mat-hint>
+            <mat-error>
+                <mat-error ><strong>campo requerido</strong></mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+        <p></p>
+      </form>
+      <button id="b" (click)="onSubmit()" mat-button>Editar Registro</button>
+          <button id="be" (click)="goBack()" mat-button>Cancelar</button>
+  </mat-card-content>
+</mat-card>

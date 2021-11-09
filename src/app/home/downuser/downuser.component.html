@@ -1,0 +1,56 @@
+<h1 id="h1" style="color: #70757d;">PANEL DE ADMINISTRACIÓN</h1>
+  <mat-card class="card responsive">
+  <mat-card-title>¿Está seguro de que decesa desactivar este usuario?</mat-card-title>
+  <mat-card-content id="cont">
+      <form [formGroup]="downUser"  >
+      <input type="text" formControlName ="id" style="display: none;"> 
+      <mat-form-field id ="mat2" appearance="legacy" >
+        <mat-label  style="color: black;">Nombre: {{this.name}}  </mat-label>
+        <mat-select name="email" formControlName="name">
+            <mat-option>{{this.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+          
+          <mat-form-field id ="mat2" appearance="legacy" >
+            <mat-label  style="color: black;">Apellido Paterno: {{this.lastnamef}}  </mat-label>
+            <mat-select name="email" formControlName="lastnamef">
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field id ="mat2" appearance="legacy" >
+            <mat-label  style="color: black;">Apellido Materno: {{this.lastnamem}}  </mat-label>
+            <mat-select name="email" formControlName="lastnamem">
+            </mat-select>
+          </mat-form-field>
+         
+          <mat-form-field id ="mat2" appearance="legacy" >
+            <mat-label  style="color: black;">Email: {{this.email}}  </mat-label>
+            <mat-select name="email" formControlName="email">rgerter
+            </mat-select>
+          </mat-form-field>
+
+         <mat-form-field id ="mat2" appearance="legacy" >
+           <mat-label  style="color: black;">Rol Actual: {{this.role}}  </mat-label>
+           <mat-select name="role_id" formControlName="role">rgerter
+           </mat-select>
+         </mat-form-field>
+
+         <mat-form-field id ="mat2" appearance="legacy">
+           <mat-label style="color: black;">Administración Actual: </mat-label>
+           <mat-select formControlName="area">
+           </mat-select>
+         </mat-form-field>
+
+        <mat-form-field  class="lala" appearance="legacy">
+          <mat-label style="color: black;">Puesto Actual: </mat-label>
+          <mat-select disable formControlName="puesto">
+          </mat-select>
+          </mat-form-field>
+
+        <mat-divider></mat-divider>
+        <p></p>
+      </form>
+      <button id="b" (click)="desactiveUsr()" mat-button>Desactivar</button>
+          <button id="be" (click)="goBack()" mat-button>Cancelar</button>
+  </mat-card-content>
+</mat-card>

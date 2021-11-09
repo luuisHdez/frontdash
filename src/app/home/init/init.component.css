@@ -1,0 +1,27 @@
+
+#imagenfont{
+    display: flex;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+#Actions{
+    color:hsl(210, 7%, 18%);
+    display: flex;
+    padding-left: 35%;
+    padding-right: 40%;
+    margin-bottom: 1px solid hsl(210, 7%, 18%);;
+}
+mat-card-title{
+    color: hsl(210, 7%, 18%);;
+    display: flex;
+    padding-left: 37%;
+    padding-right: 40%;
+    font-size: 29px;
+}
+mat-card-subtitle{
+    color: hsl(210, 7%, 18%);;
+    display: flex;
+    padding-left: 38%;
+    padding-right: 41%;
+    font-size: 18px;
+}

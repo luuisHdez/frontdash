@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+  }
+  canvas{
+    width: 900px;
+  }
+  .selectpicker{
+padding-left: 10%;
+  }
+  #buttom{
+    color: rgb(158, 158, 158);
+    float: right;
+  }
+  .mat-date-range-input-inner {
+    color: black;
+  }
+  

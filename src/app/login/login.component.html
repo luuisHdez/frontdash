@@ -1,0 +1,29 @@
+<mat-card id="card" class="card responsive">
+    <mat-card id="contenido"> 
+        <img id="img"  src="../../assets/img/h.ayun.jpeg" />
+    <mat-card-title id="title">DASHBOARD ANALITYCS</mat-card-title>
+    
+    <mat-card-content id="content">
+        
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <mat-form-field id ="mat1" class="example-full-width" appearance="legacy">
+        <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" name="email" [ngClass]="{'is-invalid': submitted && f.email.errors}" placeholder="Ex. pat@example.com">     
+        <mat-error *ngIf="submitted && f.email.errors">Por favor ingresa una dirección de correo valida 
+        <mat-error *ngIf="f.email.errors.required"><strong>Email requerido</strong></mat-error>
+        </mat-error> 
+    </mat-form-field>
+
+    <mat-form-field id ="mat1" class="example-full-width" appearance="legacy">
+        <mat-label>Contraseña</mat-label>
+            <input type="password" matInput formControlName="password" name="password" [ngClass]="{'is-invalid': submitted && f.password.errors}" placeholder="Password">
+            <mat-hint></mat-hint>
+        <mat-error *ngIf="submitted && f.password.errors">Debe contener al menos 6 carácteres
+        <mat-error *ngIf="f.password.errors.required"><strong>Campo requerido</strong></mat-error>
+        </mat-error> 
+    </mat-form-field>
+    <button id="b" mat-button><mat-icon>how_to_reg</mat-icon>Iniciar Sesión</button>
+</form>
+    </mat-card-content>
+</mat-card>
+</mat-card>

@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+  }
+  #myfirstChart{
+    width: 900px;
+  }
+  #divchart{
+    width: 700px;
+    height:"250px"
+  }
+  .selectpicker{
+padding-left: 10%;
+  }
+  #buttom{
+    color: rgb(158, 158, 158);
+    float: right;
+  }
+  
+  .mat-date-range-input-inner{
+    color: black;
+  }
+  #canvasin {
+    display: block;
+    box-sizing: border-box;
+    height: 640px !important;
+    width: 640.8px !important;
+    margin-left: 28%;
+    margin-right: 25%;
+}

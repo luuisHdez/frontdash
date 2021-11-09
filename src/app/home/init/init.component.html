@@ -1,0 +1,10 @@
+<mat-card-content>
+    <img mat-card-image id="imagenfont" src="../../assets/img/descarga.png">
+    <mat-card-title>Bienvenido al sistema {{nameUser | uppercase}}</mat-card-title>
+    <mat-card-subtitle>Opciones de Actualización del Sistema</mat-card-subtitle>
+    <mat-card-actions id="Actions">
+     <button mat-button (click)="updateData()">Actualizar Datos</button>
+     <button mat-button (click)="updateArea()">Actializar Áreas</button>
+     <button mat-button (click)="updateRoles()">Actializar Roles</button>
+   </mat-card-actions>
+</mat-card-content>

@@ -1,0 +1,36 @@
+#mat1{
+  margin-left: 18%;
+  width: 32%;
+}
+#mat2{
+  margin-left: 7%;
+  width: 32%;
+}
+#mata{
+  margin-left: 33%;
+  width: 32%;
+  text-align: center;
+  font-weight: bold;
+}
+mat-card-title{
+    text-align: center;
+    margin-right: 5%
+}
+mat-card {
+      margin-inline: auto;
+      margin-top: 5%;
+  }
+  mat-card-title{
+      color: #70757d;
+  }
+  button,#b{
+     width: 30%;
+     margin-left: 12%;
+     box-shadow: 1px 1px  grey;
+  }
+  #h1{
+    color: #70757d;
+  text-align: -webkit-center;
+  line-height: 0%;
+    font-size: 30px;
+  }

@@ -1,0 +1,45 @@
+#mat1{
+    margin-left: 8%;
+    margin-right: 10%;
+    width: 32%;
+    color: black;
+  }
+  #mat2{
+    margin-left: 8%;
+    margin-right: 10%;
+    width: 32%;
+  }
+  mat-card-title{
+      text-align: center;
+      margin-right: 5%
+  }
+  mat-card {
+        display: flex;
+        margin-inline: auto;
+        margin-top: 5%;
+        width: 72%;
+    }
+    mat-card-title{
+        color: #70757d;
+    }
+    button,#b{
+       width: 30%;
+       margin-left: 12%;
+       box-shadow: 1px 1px  grey;
+    }
+    #h1{
+      color: #70757d;
+    text-align: -webkit-center;
+    line-height: 0%;
+    font-size: 30px;
+    }
+    label{
+      color:black;
+      background-color: black;
+    }
+    .lala{
+        margin-left: 33%;
+        text-align: center;
+        margin-right: 10%;
+        width: 32%;
+    }

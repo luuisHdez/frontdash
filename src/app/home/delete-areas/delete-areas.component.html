@@ -1,0 +1,37 @@
+<h1 id="h1" style="color: #70757d;">GESTIÓN DE METAS</h1>
+  <mat-card class="card responsive">
+  <mat-card-title>ELIMINAR META</mat-card-title>
+  <mat-card-content id="cont">
+      <form [formGroup]="formDeleteArea">
+      <input type="text" formControlName="area_id" style="display: none;"> 
+      <mat-form-field id ="mat2" appearance="legacy">
+        <mat-label style="color: black;">Ádministración: {{this.direccion}} </mat-label>
+        <mat-select formControlName="direccion">
+          <mat-option>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+          
+      <mat-form-field id ="mat1" appearance="legacy" >
+        <mat-label  style="color: black;">Responsable:{{this.name}} {{this.lastnamef}} {{this.lastnamem}} </mat-label>
+        <mat-select name="role_id" formControlName="responsable">
+          <mat-option  >
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+          <mat-form-field id ="mata" appearance="legacy" >
+            <mat-label  style="color: black;">Fecha: {{this.fecha}}</mat-label>
+            <mat-select name="month" formControlName="fecha" >
+              <mat-option ></mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <mat-divider></mat-divider>
+        <p></p>
+      </form>
+      <button id="b" (click)="onSubmit()" mat-button>Eliminar</button>
+          <button id="be" (click)="goBack()" mat-button>Cancelar</button>
+  </mat-card-content>
+</mat-card>
+

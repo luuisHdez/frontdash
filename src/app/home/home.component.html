@@ -1,0 +1,67 @@
+<mat-toolbar style="color: rgb(41, 48, 109); background-color: #eeeeef;" class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <h2>DASHBOARD ANALITYCS</h2>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" style="background-color: #eeeeef;" >
+
+        <img class="avatar mat-elevation-z8" src="../../assets/img/descarga.png" />
+
+        <p class="designation">Usuario en sesión</p>
+        <h4 class="name">{{nameUser | uppercase}}</h4>
+
+        <mat-divider></mat-divider>
+
+        <button (click)="navigate()" (click)="sidenav.toggle()" mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button routerLink="/index-metas" (click)="sidenav.toggle()"class="menu-button">
+            <mat-icon>assignment</mat-icon>
+            <span>Gestion de Metas</span>
+        </button>
+        <button mat-button  (click)="click()" (click)="sidenav.toggle()" class="menu-button">
+            <mat-icon>people</mat-icon>
+            <span>Gestión de Usuarios</span>
+        </button>
+        <button mat-button routerLink="/index-areas" class="menu-button" (click)="sidenav.toggle()">
+            <mat-icon>device_hub</mat-icon>
+            <span>Gestión de Áreas</span>
+        </button>
+        
+
+        <mat-divider></mat-divider>
+
+        <button mat-button routerLink="/productos-tendencia" class="menu-button" (click)="sidenav.toggle()">
+            <mat-icon>assessment</mat-icon>
+            <span>Productos</span>
+        </button>
+        <button mat-button class="menu-button" (click)="sidenav.toggle()" routerLink="/areatendencia">
+            <mat-icon>assessment</mat-icon>
+            <span>Áreas</span>
+        </button>
+        <button mat-button routerLink="/tendencia"  class="menu-button" (click)="sidenav.toggle()">
+            <mat-icon>assessment</mat-icon>
+            <span>Tendencias</span>
+        </button>
+        <br>
+        <br>
+        <mat-divider></mat-divider>
+        <button mat-button (click)="logout()" class="menu-button">
+            <mat-icon>undo</mat-icon>
+            <span>Cerrar Sesión</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content style="background-color: white;">
+        <div class="content">
+           <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

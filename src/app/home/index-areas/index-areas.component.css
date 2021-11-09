@@ -1,0 +1,42 @@
+
+    #button1{
+     float: right;
+     background-color: white;
+     color: rgba(0,0,0,.6);
+     font-size: 17px;
+     border-radius: 0%;
+    }
+    mat-card-subtitle{
+      display: inline-flex;
+      font-size:25px
+    }
+    .mat-card-title {
+      display: contents;
+      margin-bottom: 8px;
+  }
+    
+   table{
+    width: 100%;
+    text-align:center;
+    display: inline-table;
+  }
+  .mat-form-field {
+    font-size: 14px;
+  }
+mat-card{
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  th.mat-header-cell {
+    text-align: center;
+  }
+  td.mat-cell:first-of-type{
+      padding-left: 24px;
+  }

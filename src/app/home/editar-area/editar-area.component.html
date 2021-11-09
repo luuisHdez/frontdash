@@ -1,0 +1,44 @@
+<h1 id="h1" style="color: #70757d;">GESTIÓN DE ÁREAS</h1>
+  <mat-card class="card responsive">
+  <mat-card-title>EDICIÓN DE ÁREAS</mat-card-title>
+  <mat-card-content id="cont">
+      <form [formGroup]="fea">
+<input type="number" matInput formControlName="id" style="display: none;">
+        <mat-form-field id ="mat2" class="example-full-width ml-15" aspect="legacy">
+            <mat-label style="color: black;">Dirección:</mat-label>
+            <input type="text" matInput  name="Dirección" formControlName="area" placeholder="Ingresar Nombre de Dirección" >
+            <mat-hint></mat-hint>
+            <mat-error>
+                <mat-error ><strong>campo requerido</strong></mat-error>
+            </mat-error>
+        </mat-form-field>
+          
+      <mat-form-field id ="mat1" appearance="legacy" >
+        <mat-label  style="color: black;">Responsable: {{responsable}} {{lastnamef}} {{lastnamem}}</mat-label>
+        <mat-select name="role_id" formControlName="responsable" >
+          <mat-option *ngFor="let u of user" [value]="u._id">
+              {{u._name}} {{u.lastnamef}} {{u.lastnamem}}
+          </mat-option>
+        </mat-select>
+        <mat-error>
+            <mat-error ><strong>campo requerido</strong></mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field id="mata" appearance="legacy">
+        <mat-label>Fecha de creación: {{fecha}}</mat-label>
+        <input matInput formControlName="fecha" [matDatepicker]="picker"> {{fecha}}
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error>
+            <mat-error ><strong>campo requerido</strong></mat-error>
+        </mat-error>
+      </mat-form-field>
+
+        <mat-divider></mat-divider>
+        <p></p>
+      </form>
+      <button id="b" (click)="onSubmit()" mat-button> Registrar</button>
+          <button id="be" (click)="goBack()"  mat-button>Cancelar</button>
+  </mat-card-content>
+</mat-card>

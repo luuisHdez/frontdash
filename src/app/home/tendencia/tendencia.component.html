@@ -1,0 +1,50 @@
+<form  [formGroup]="formTendencia">
+
+    <mat-form-field appearance="legacy">
+  <mat-label>Ingresa rango de fechas</mat-label>
+  <mat-date-range-input  [rangePicker]="picker">
+    <input matStartDate formControlName = "dateFrom" placeholder="Fecha Inicial">
+    <input matEndDate formControlName = "dateTo" placeholder="Fecha Final">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+  
+  <mat-form-field class="selectpicker" appearance="legacy">
+    <mat-label>Elegir Área</mat-label>
+    <mat-select formControlName="area">
+      <mat-option  *ngFor="let u of areas" [value]="u._namearea">
+        {{u._namearea}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="selectpicker" appearance="legacy">
+    <mat-label>Elegir Ingreso</mat-label>
+    <mat-select formControlName="ingresos" >
+      <mat-option  value="mayor">Ingreso Mayor</mat-option>
+      <mat-option value="menor">Ingreso Menor</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <button class="mat-elevation-z1" id="buttom" (click)="onSubmit()" appearance="legacy" mat-button>Ver Datos</button>
+  </form>
+  <div width="100%" class="mat-elevation-z8">
+  <div id="div1" width="50%" style="background-color: white;">
+  <ngx-charts-gauge id="charts"
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="datita"
+  [legend]="legend"
+  [legendPosition]="legendPosition"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  [legendTitle]="legendTitle"
+  >
+</ngx-charts-gauge>
+  </div>
+  <div id="canvasin" style="width:40%; background-color: white;" >
+        <canvas id="myChart" width="1000px"height="360px" #mychart></canvas>
+     </div>
+    </div>

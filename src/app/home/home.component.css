@@ -1,0 +1,109 @@
+mat-toolbar {
+    background: hsl(210, 7%, 18%);
+    color: white;
+}
+
+mat-sidenav {
+    width: 250px;
+    border-right: none;
+    background: hsl(212, 100%, 96%);
+    color: black;
+    padding: 0px;
+    text-align: center;
+}
+
+.content {
+    height: calc(100vh - 90px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    
+    justify-content: center;
+    align-items: baseline;
+    font-size: 2rem;
+    color: rgb(218, 218, 218);
+}
+.content[_ngcontent-kde-c47] {
+    align-items: none;
+}
+
+mat-sidenav-container {
+    height: calc(105vh - 65px);
+    background-color: rgb(233, 223, 223);
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+
+    
+}
+mat-icon {
+    margin-right: 8px;
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.mat-drawer-content{
+    background-color: rgb(236,232,232,1);
+    background-color: rgb(233, 223, 223);;
+}
+.datepicker{
+    width: 280px;
+    height: -webkit-fill-available;
+}
+.date{
+    height: -webkit-fill-available;
+}
+h1{
+    display:flex;
+    text-decoration: underline;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#imagenfont{
+    display: flex;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+#Actions{
+    color:hsl(210, 7%, 18%);
+    display: flex;
+    padding-left: 35%;
+    padding-right: 40%;
+    margin-bottom: 1px solid hsl(210, 7%, 18%);;
+}
+mat-card-title{
+    color: hsl(210, 7%, 18%);;
+    display: flex;
+    padding-left: 37%;
+    padding-right: 40%;
+    font-size: 29px;
+}
+mat-card-subtitle{
+    color: hsl(210, 7%, 18%);;
+    display: flex;
+    padding-left: 38%;
+    padding-right: 41%;
+    font-size: 18px;
+}
+h2{
+    font-size: 20px !important;
+}

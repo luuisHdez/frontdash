@@ -1,0 +1,26 @@
+mat-form-field {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 30%;
+  }
+  mat-card-title{
+      text-align: center;
+  }
+  mat-card {
+        width: 10%;
+        display: flex;
+        margin-inline: auto;
+        margin-top: 10%;
+    }
+    mat-card-title{
+        color: #70757d;
+    }
+    button,#b{
+       
+       width: 30%;
+       background-color: rgb(251, 255, 255);
+       margin-left: 12%;
+       box-shadow: 1px 1px  grey;
+    }
+
+    

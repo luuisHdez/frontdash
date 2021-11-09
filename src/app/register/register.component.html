@@ -1,0 +1,88 @@
+<mat-card class="card" style="width: 45%;">
+    <mat-card-title>NUEVO USUARIO</mat-card-title>
+    <mat-card-content>
+        <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" aspect="legacy">
+                <mat-label>Nombre</mat-label>
+                <input type="text" matInput formControlName="name" name="name" [ngClass]="{'is-invalid': submitted && f.name.errors}" placeholder="Nombre">
+                <mat-hint></mat-hint>
+                <mat-error *ngIf="submitted && f.name.errors">
+                    <mat-error *ngIf="f.name.errors.required"><strong>campo requerido</strong></mat-error>
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width ml-15" aspect="legacy">
+                <mat-label>Apellido paterno</mat-label>
+                <input type="text" matInput formControlName="lastnamef" name="lastnamef" [ngClass]="{'is-invalid': submitted && f.lastnamef.errors}" placeholder="Apellido paterno">
+                <mat-hint></mat-hint>
+                <mat-error *ngIf="submitted && f.lastnamef.errors">
+                    <mat-error *ngIf="f.lastnamef.errors.required"><strong>campo requerido</strong></mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width mr-10" appearance="legacy">
+                <mat-label>Apellido Materno</mat-label>
+                <input type="text" matInput formControlName="lastnamem" name="lastnamem" [ngClass]="{'is-invalid': submitted && f.lastnamem.errors}" placeholder="Apellido materno">
+                <mat-hint></mat-hint>
+                <mat-error *ngIf="submitted && f.lastnamem.errors">
+                <mat-error *ngIf="f.lastnamem.errors.required"><strong>campo requerido</strong></mat-error>
+                </mat-error>
+            </mat-form-field>
+           
+         <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" name="email" [ngClass]="{'is-invalid': submitted && f.email.errors}" placeholder="Ex. pat@example.com">     
+            <mat-error *ngIf="submitted && f.email.errors">Please enter a valid email address 
+            <mat-error *ngIf="f.email.errors.required"><strong>Campor requerido</strong></mat-error>
+            </mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Contraseña</mat-label>
+                <input type="password" matInput formControlName="password" name="password" [ngClass]="{'is-invalid': submitted && f.password.errors}" placeholder="Password">
+                <mat-hint></mat-hint>
+            <mat-error *ngIf="submitted && f.password.errors">Debe contener al menos 6 carácteres
+            <mat-error *ngIf="f.password.errors.required"><strong>Campo requerido</strong></mat-error>
+            </mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Confirmar contraseña</mat-label>
+                <input type="password" matInput formControlName="confirmPassword" name="confirmPassword" [ngClass]="{'is-invalid': submitted && f.confirmPassword.errors}" placeholder="Password">
+                <mat-hint></mat-hint>
+            <mat-error *ngIf="submitted && f.confirmPassword.errors">Debe contener almenos 6 carácteres  
+            <mat-error *ngIf="f.confirmPassword.errors.required"><strong>Las contraseñas deben coincidir</strong></mat-error>
+            </mat-error>
+        </mat-form-field>
+        <p></p>
+
+           <mat-form-field appearance="legacy">
+             <mat-label>Role de usuario</mat-label>
+             <mat-select formControlName="role" name="role">
+               <mat-option  *ngFor="let r of this.role" [value]="r.id" name= "role">
+                   {{r.name}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+
+           <mat-form-field appearance="legacy">
+             <mat-label>Favorite food</mat-label>
+             <mat-select>
+               <mat-option *ngFor="" [value]="">
+                 
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+               
+                <mat-divider></mat-divider>
+                <p></p>
+               
+                    <button id="b"  mat-button>Registrar</button>
+                    <button id="b"  routerLink="/login" mat-button>Cancsdfsdelar</button>
+                    <button id="b"  routerLink="/" mat-button>Cancelar</button>
+        </form>
+    </mat-card-content>
+    
+</mat-card>
+
+

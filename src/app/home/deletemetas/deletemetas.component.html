@@ -1,0 +1,51 @@
+<h1 id="h1" style="color: #70757d;">GESTIÓN DE METAS</h1>
+  <mat-card class="card responsive">
+  <mat-card-title>ELIMINAR META</mat-card-title>
+  <mat-card-content id="cont">
+      <form  [formGroup]="formDelete">
+      <input type="text" formControlName="id" style="display: none;"> 
+      <mat-form-field id ="mat2" appearance="legacy">
+        <mat-label style="color: black;">Ádministración: {{this._namearea}} </mat-label>
+        <mat-select formControlName="area">
+          <mat-option>
+           
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+          
+      <mat-form-field id ="mat1" appearance="legacy" >
+        <mat-label  style="color: black;">Responsable: {{this._name}} {{this.lastnamef}} {{this.lastnamem}}</mat-label>
+        <mat-select name="role_id" formControlName="user">
+          <mat-option  >
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+         <mat-form-field id ="mat2" appearance="legacy" >
+           <mat-label  style="color: black;">Fecha de Inicio: {{this.dateto}}  </mat-label>
+           <mat-select name="month" formControlName="month">
+             <mat-option ></mat-option>
+           </mat-select>
+         </mat-form-field>
+
+         <mat-form-field id ="mat1" appearance="legacy" >
+            <mat-label  style="color: black;">Fecha de Fin: {{this.datefrom}}</mat-label>
+            <mat-select name="month" formControlName="anio">
+              <mat-option ></mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field id ="mata" appearance="legacy" >
+            <mat-label  style="color: black;">Monto: {{this.monto}}</mat-label>
+            <mat-select name="month" formControlName="monto">
+              <mat-option ></mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <mat-divider></mat-divider>
+        <p></p>
+      </form>
+      <button id="b" (click)="onSubmit()" mat-button>Eliminar</button>
+          <button id="be" (click)="goBack()" mat-button>Cancelar</button>
+  </mat-card-content>
+</mat-card>

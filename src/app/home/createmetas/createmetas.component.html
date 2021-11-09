@@ -1,0 +1,54 @@
+<h1 id="h1" style="color: #70757d;">GESTIÓN DE METAS</h1>
+  <mat-card class="card responsive">
+  <mat-card-title>CREACIÓN DE META</mat-card-title>
+  <mat-card-content id="cont">
+      <form [formGroup]="createF">
+      <mat-form-field id ="mat2" appearance="legacy">
+        <mat-label style="color: black;">Ádministración</mat-label>
+        <mat-select  formControlName="areas">
+          <mat-option (click)="select()" *ngFor= "let a of area" [value]="a">
+            {{a.area}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="submitted && f.areas.errors.required">
+          <mat-error *ngIf="f.areas.errors.required"><strong>campo requerido</strong></mat-error>
+      </mat-error>
+      </mat-form-field>
+          
+      <mat-form-field id ="mat1" class="example-full-width ml-15" aspect="legacy">
+        <mat-label>Usuario</mat-label>
+        <input type="text" matInput  name="user"   placeholder="responsable" formControlName="responsable" [ngClass]="{'is-invalid': submitted && f.responsable.errors}">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="submitted && f.responsable.errors">
+          <mat-error *ngIf="f.responsable.errors.required"><strong>campo requerido</strong></mat-error>
+      </mat-error>
+    </mat-form-field>
+
+      <mat-form-field id="mata" appearance="legacy">
+        <mat-label style="color: black;">Ingresa el rango de fecha</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate formControlName="datefrom" placeholder="Start date">
+          <input matEndDate formControlName="dateto" placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+        <mat-error *ngIf="submitted && f.datefrom.errors.required && f.dateto.errors.required">Campo requerido
+      </mat-error>
+      </mat-form-field>
+
+         <mat-form-field id ="mata" class="example-full-width ml-15" aspect="legacy">
+            <mat-label>Monto</mat-label>
+            <input type="text" matInput  name="monto"   placeholder="Ingresar monto" formControlName="monto" [ngClass]="{'is-invalid': submitted && f.monto.errors}">
+            <mat-hint></mat-hint>
+            <mat-error *ngIf="submitted && f.monto.errors">
+              <mat-error *ngIf="f.monto.errors.required"><strong>campo requerido</strong></mat-error>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+        <p></p>
+      </form>
+      <button id="b" (click) ="onSubmit()"  mat-button>Registrar</button>
+          <button id="be" (click)="goBack()"  mat-button>Cancelar</button>
+  </mat-card-content>
+</mat-card>

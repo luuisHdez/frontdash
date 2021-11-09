@@ -1,0 +1,9 @@
+#conte{
+    display: unset;
+    margin-right: 20%;
+    width: 1000px;
+    height: 100px;
+}
+.chart-legend {
+    display: inline!important;
+}
